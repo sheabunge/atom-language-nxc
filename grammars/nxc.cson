@@ -1,0 +1,54 @@
+'scopeName': 'source.nxc'
+'fileTypes': [
+    'nxc'
+]
+'name': 'Not eXactly C'
+'patterns': [
+    {
+        'include': '#special_block'
+    }
+    {
+        'include': 'source.c'
+    }
+    {
+        'match': '\\b(bool|byte|string|task|mutex)\\b'
+        'name': 'storage.type.c'
+    }
+    {
+        'match': '\\b(inline|safecall)\\b'
+        'name': 'storage.modifier.c'
+    }
+  {
+    'begin': '^\\s*#\\s*(include|import|download)\\b\\s+'
+    'captures':
+      '1':
+        'name': 'keyword.control.import.include.c'
+    'end': '(?=(?://|/\\*))|(?<!\\\\)(?=\\n)'
+    'name': 'meta.preprocessor.c.include'
+    'patterns': [
+      {
+        'match': '(?>\\\\\\s*\\n)'
+        'name': 'punctuation.separator.continuation.c'
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.c'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.c'
+        'name': 'string.quoted.double.include.c'
+      }
+    ]
+ }
+    {
+        'match': '\\b(__FLTRETVAL__|__RETURN__|__RETURNF__|__RETURNS__|__RETURNU__|__RETVAL__|__STRRETVAL__|__STRBUFFER__|__STRTMPBUFFER__|__TMPBYTE__|__TMPFLOAT__|__TMPLONG__|__TMPULONG__|__TMPWORD__)\\b'
+        'name': 'constant.language.c'
+    }
+    {
+        'match': '\\b(priority|repeat|start|stop|sub|until)\\b'
+        'name': 'keyword.control.c'
+    }
+]

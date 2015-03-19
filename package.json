@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "name": "language-nxc",
+  "description": "Atom language support for NXC",
+  "homepage": "https://github.com/sheabunge/atom-language-nxc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheabunge/atom-language-nxc.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sheabunge/atom-language-nxc/issues"
+  },
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  }
+}
