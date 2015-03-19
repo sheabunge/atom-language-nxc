@@ -1,4 +1,4 @@
-# Not eXactly C (NXC) language support in Atom
+# Not eXactly C language support in Atom
 
 Adds syntax highlighting and snippets to Not eXactly C (NXC) files in Atom.
 
